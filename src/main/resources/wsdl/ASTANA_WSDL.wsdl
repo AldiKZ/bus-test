@@ -1,0 +1,30 @@
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ctop.client.soapclient.astana1.kgd.efc.kz/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://esepshi.kz/" name="CtopChinaEndpointService" targetNamespace="http://ctop.client.soapclient.astana1.kgd.efc.kz/">
+    <wsdl:import location="http://10.59.78.3:8092/services/ctopChina?wsdl=ExchangeService.wsdl" namespace="http://esepshi.kz/">
+    </wsdl:import>
+    <wsdl:binding name="CtopChinaEndpointServiceSoapBinding" type="ns1:ExchangeService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+        <wsdl:operation name="getExchangeData">
+            <soap:operation soapAction="" style="document"></soap:operation>
+            <wsdl:input name="getExchangeData">
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output name="getExchangeDataResponse">
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getExchangeDataToKz">
+            <soap:operation soapAction="" style="document"></soap:operation>
+            <wsdl:input name="getExchangeDataToKz">
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output name="getExchangeDataToKzResponse">
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CtopChinaEndpointService">
+        <wsdl:port binding="tns:CtopChinaEndpointServiceSoapBinding" name="CtopChinaEndpointPort">
+            <soap:address location="http://10.59.78.3:8092/services/ctopChina"></soap:address>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
