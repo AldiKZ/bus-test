@@ -1,4 +1,4 @@
-package com.samgau.bustest.astana1;
+package com.samgau.bustest.ws;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
@@ -20,13 +20,22 @@ public class WSConfig extends WsConfigurerAdapter {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
         servlet.setApplicationContext(applicationContext);
         servlet.setTransformWsdlLocations(true);
+        servlet.setTransformSchemaLocations(true);
+
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
 
     @Bean(name = "astana")
-    public Wsdl11Definition submissionReceiverWsdl11Definition() {
+    public Wsdl11Definition astanaWsdl11Definition() {
         SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
         wsdl11Definition.setWsdl(new ClassPathResource("/wsdl/ASTANA_WSDL.wsdl"));
+        return wsdl11Definition;
+    }
+
+    @Bean(name = "china")
+    public Wsdl11Definition chinaWsdl11Definition() {
+        SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
+        wsdl11Definition.setWsdl(new ClassPathResource("/wsdl/CHINA_WSDL_NEW.wsdl"));
         return wsdl11Definition;
     }
 }

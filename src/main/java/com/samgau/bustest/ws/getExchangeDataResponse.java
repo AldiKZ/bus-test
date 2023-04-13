@@ -1,17 +1,15 @@
-package com.samgau.bustest.astana1;
+package com.samgau.bustest.ws;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getExchangeDataResponse", propOrder = {"_return"})
-public class GetExchangeDataResponse {
+@XmlRootElement(name = "getExchangeResponse")
+public class getExchangeDataResponse {
     @XmlElement(name = "return")
     protected String _return;
 
-    public GetExchangeDataResponse() {
+    public getExchangeDataResponse() {
     }
 
     public String getReturn() {

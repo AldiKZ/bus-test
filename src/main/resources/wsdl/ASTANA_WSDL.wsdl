@@ -1,4 +1,11 @@
-<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ctop.client.soapclient.astana1.kgd.efc.kz/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://esepshi.kz/" name="CtopChinaEndpointService" targetNamespace="http://ctop.client.soapclient.astana1.kgd.efc.kz/">
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                                        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                                        xmlns:tns="http://ctop.client.soapclient.astana1.kgd.efc.kz/"
+                                        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                                        xmlns:ns2="http://schemas.xmlsoap.org/soap/http"
+                                        xmlns:ns1="http://esepshi.kz/"
+                                        name="CtopChinaEndpointService"
+                                        targetNamespace="http://ctop.client.soapclient.astana1.kgd.efc.kz/">
     <wsdl:import location="http://10.59.78.3:8092/services/ctopChina?wsdl=ExchangeService.wsdl" namespace="http://esepshi.kz/">
     </wsdl:import>
     <wsdl:binding name="CtopChinaEndpointServiceSoapBinding" type="ns1:ExchangeService">
