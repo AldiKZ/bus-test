@@ -1,4 +1,4 @@
-package com.samgau.bustest.ws;
+package com.samgau.bustest.china;
 
 import javax.xml.bind.annotation.*;
 

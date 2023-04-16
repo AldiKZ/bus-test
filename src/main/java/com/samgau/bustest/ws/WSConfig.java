@@ -19,8 +19,8 @@ public class WSConfig extends WsConfigurerAdapter {
     public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
         servlet.setApplicationContext(applicationContext);
-        servlet.setTransformWsdlLocations(true);
-        servlet.setTransformSchemaLocations(true);
+//        servlet.setTransformWsdlLocations(true);
+//        servlet.setTransformSchemaLocations(true);
 
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }

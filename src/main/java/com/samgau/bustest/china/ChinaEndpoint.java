@@ -1,7 +1,5 @@
 package com.samgau.bustest.china;
 
-import com.samgau.bustest.ws.getExchangeData;
-import com.samgau.bustest.ws.getExchangeDataResponse;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -15,7 +13,7 @@ public class ChinaEndpoint {
     @ResponsePayload
     public getExchangeDataResponse getExchangeData(@RequestPayload getExchangeData getExchangeData) {
         getExchangeDataResponse getExchangeDataResponse = new getExchangeDataResponse();
-        getExchangeDataResponse.setReturn(getExchangeData.getExchangeData());
+        getExchangeDataResponse.setReturn("RESPONSE: "+getExchangeData.getExchangeData());
         return getExchangeDataResponse;
     }
 }

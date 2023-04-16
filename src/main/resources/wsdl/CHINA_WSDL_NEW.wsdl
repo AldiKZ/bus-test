@@ -59,7 +59,7 @@
     </wsdl:binding>
     <wsdl:service name="exchangeService">
         <wsdl:port binding="tns:exchangeServiceSoapBinding" name="CtopKzDataAcceptServiceImplPort">
-            <soap:address location="http://10.1.0.165/soap/exchangeService"/>
+            <soap:address location="http://localhost:9988/soap/exchangeService"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

@@ -1,10 +1,10 @@
-package com.samgau.bustest.ws;
+package com.samgau.bustest.astana1;
 
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getExchangeData", propOrder = "exchangeData")
-@XmlRootElement(name = "getExchangeData")
+@XmlRootElement(name = "getExchangeData", namespace = "http://ctop.client.soapclient.astana1.kgd.efc.kz/")
 public class getExchangeData {
     @XmlElement(name = "exchangeData")
     protected String exchangeData;

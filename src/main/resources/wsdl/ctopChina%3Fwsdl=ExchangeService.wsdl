@@ -1,0 +1,55 @@
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://esepshi.kz/" name="ExchangeService" targetNamespace="http://esepshi.kz/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esepshi.kz/" targetNamespace="http://esepshi.kz/" version="1.0">
+
+  <xs:element name="getExchangeData" type="tns:getExchangeData"></xs:element>
+
+  <xs:element name="getExchangeDataResponse" type="tns:getExchangeDataResponse"></xs:element>
+
+  <xs:element name="getExchangeDataToKz" type="tns:getExchangeData"></xs:element>
+
+  <xs:complexType name="getExchangeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="exchangeData" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getExchangeDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getExchangeData">
+    <wsdl:part element="ns1:getExchangeData" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getExchangeDataToKz">
+    <wsdl:part element="ns1:getExchangeDataToKz" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getExchangeDataToKzResponse">
+    <wsdl:part element="ns1:getExchangeDataResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getExchangeDataResponse">
+    <wsdl:part element="ns1:getExchangeDataResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ExchangeService">
+    <wsdl:operation name="getExchangeData">
+      <wsdl:input message="ns1:getExchangeData" name="getExchangeData">
+    </wsdl:input>
+      <wsdl:output message="ns1:getExchangeDataResponse" name="getExchangeDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExchangeDataToKz">
+      <wsdl:input message="ns1:getExchangeDataToKz" name="getExchangeDataToKz">
+    </wsdl:input>
+      <wsdl:output message="ns1:getExchangeDataToKzResponse" name="getExchangeDataToKzResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,6 +1,6 @@
 package com.samgau.bustest.astana1;
-import com.samgau.bustest.ws.getExchangeData;
-import com.samgau.bustest.ws.getExchangeDataResponse;
+import com.samgau.bustest.china.getExchangeData;
+import com.samgau.bustest.china.getExchangeDataResponse;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
